@@ -6,7 +6,7 @@ import globalStyle from "../globalStyle";
 import Swiper from 'react-native-swiper';
 import GoodsComp from "../components/GoodsComp";
 
-function Home({ navigation }): JSX.Element {
+function Home({ navigation }: Record<any,any>): JSX.Element {
     const [banner, setBanner] = useState([]);
     const [hall, setHall] = useState([]);
     const [menu, setMenu] = useState([]);
@@ -90,22 +90,30 @@ function Home({ navigation }): JSX.Element {
         </View>
         
         <View style={styles.diamondRegion}>
-            <View style={[styles.diamondItem,globalStyle.ml30]} onPress={}>
-                <Image source={require('../images/diamond_region_announcement_icon.png')} style={styles.diamondIcon} />
-                <Text style={globalStyle.mt5}>公告</Text>
-            </View>
-            <View style={styles.diamondItem}>
-                <Image source={require('../images/diamond_region_sales_policy_icon.png')} style={styles.diamondIcon} />
-                <Text style={globalStyle.mt5}>销售政策</Text>
-            </View>
-            <View style={styles.diamondItem}>
-                <Image source={require('../images/diamond_region_logistics_icon.png')} style={styles.diamondIcon} />
-                <Text style={globalStyle.mt5}>物流</Text>
-            </View>
-            <View style={[styles.diamondItem,globalStyle.mr30]}>
-                <Image source={require('../images/diamond_region_cart_icon.png')} style={styles.diamondIcon} />
-                <Text style={globalStyle.mt5}>购物车</Text>
-            </View>    
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('WebviewContainer')}>
+                <View style={[styles.diamondItem,globalStyle.ml30]}>
+                    <Image source={require('../images/diamond_region_announcement_icon.png')} style={styles.diamondIcon} />
+                    <Text style={globalStyle.mt5}>公告</Text>
+                </View>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('WebviewContainer')}>
+                <View style={styles.diamondItem}>
+                    <Image source={require('../images/diamond_region_sales_policy_icon.png')} style={styles.diamondIcon} />
+                    <Text style={globalStyle.mt5}>销售政策</Text>
+                </View>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('WebviewContainer')}>
+                <View style={styles.diamondItem}>
+                    <Image source={require('../images/diamond_region_logistics_icon.png')} style={styles.diamondIcon} />
+                    <Text style={globalStyle.mt5}>物流</Text>
+                </View>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Cart')}>
+                <View style={[styles.diamondItem,globalStyle.mr30]}>
+                    <Image source={require('../images/diamond_region_cart_icon.png')} style={styles.diamondIcon} />
+                    <Text style={globalStyle.mt5}>购物车</Text>
+                </View>
+            </TouchableWithoutFeedback>        
         </View>
         
         <View style={styles.menuBox}>
@@ -246,4 +254,4 @@ const styles = StyleSheet.create({
     }
 });
   
-export default Home
+export default Home;

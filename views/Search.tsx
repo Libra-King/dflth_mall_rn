@@ -4,7 +4,7 @@ import globalStyle from '../globalStyle';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class Search extends React.Component {
-    constructor(props) { 
+    constructor(props: Record<any,any>) { 
         super(props);
         this.state = {
             searchList: [] as Array<any>,
