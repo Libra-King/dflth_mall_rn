@@ -61,7 +61,7 @@ function Home({ navigation }): JSX.Element {
             let { search, category } = data;
             AsyncStorage.setItem('search', JSON.stringify(search));
             AsyncStorage.setItem('category', JSON.stringify(category));
-         })
+         });
     }
 
     return (
@@ -90,7 +90,7 @@ function Home({ navigation }): JSX.Element {
         </View>
         
         <View style={styles.diamondRegion}>
-            <View style={[styles.diamondItem,globalStyle.ml30]}>
+            <View style={[styles.diamondItem,globalStyle.ml30]} onPress={}>
                 <Image source={require('../images/diamond_region_announcement_icon.png')} style={styles.diamondIcon} />
                 <Text style={globalStyle.mt5}>公告</Text>
             </View>

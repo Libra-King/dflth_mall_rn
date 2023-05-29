@@ -43,6 +43,10 @@ export default globalStyle = StyleSheet.create({
     width: '100%',
   },
 
+  height100: {
+    height: '100%',
+  },
+
   mt5: {
     marginTop: 5,
   },
@@ -177,5 +181,9 @@ export default globalStyle = StyleSheet.create({
 
   color_666: {
     color: '#666',
+  },
+
+  pos_relative: {
+    position: 'relative',
   },
 });
