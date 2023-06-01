@@ -3,7 +3,7 @@ import { Text, View, Image, StyleSheet, Dimensions } from "react-native";
 import globalStyle from "../globalStyle";
 
 class GoodsComp extends React.Component {
-    constructor(props) {
+    constructor(props: Record<any,any>) {
         super(props);
 
         const screenWidth = (Dimensions.get('screen').width - 30) / 2;

@@ -1,4 +1,4 @@
-import {Alert, Platform} from 'react-native';
+import {Alert, Platform, Navigation} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 // import UUIDGenerator from 'react-native-uuid';
 import uuid from 'react-native-uuid';

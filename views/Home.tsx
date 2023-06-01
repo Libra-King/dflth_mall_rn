@@ -7,9 +7,9 @@ import Swiper from 'react-native-swiper';
 import GoodsComp from "../components/GoodsComp";
 
 function Home({ navigation }: Record<any,any>): JSX.Element {
-    const [banner, setBanner] = useState([]);
-    const [hall, setHall] = useState([]);
-    const [menu, setMenu] = useState([]);
+    const [banner, setBanner] = useState([] as Array<any>);
+    const [hall, setHall] = useState([] as Array<any>);
+    const [menu, setMenu] = useState([] as Array<any>);
     const [screenWidth, setScreenWidth] = useState(0);
 
     useEffect(() => { 

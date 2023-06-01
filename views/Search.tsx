@@ -8,8 +8,8 @@ class Search extends React.Component {
         super(props);
         this.state = {
             searchList: [] as Array<any>,
-            isSpot: false,
-        }
+            isSpot: false as boolean,
+        } as any;
     }
     
     componentDidMount(): void {
