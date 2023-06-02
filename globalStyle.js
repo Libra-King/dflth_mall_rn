@@ -183,6 +183,18 @@ export default globalStyle = StyleSheet.create({
     color: '#666',
   },
 
+  color_999: {
+    color: '#999',
+  },
+
+  color_d2d2d2: {
+    color: '#D2D2D2',
+  },
+
+  color_5c8acc: {
+    color: '#5C8ACC',
+  },
+
   pos_relative: {
     position: 'relative',
   },

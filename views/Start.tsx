@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { View, Image, StyleSheet, Text } from 'react-native';
 import globalStyle from '../globalStyle';
 
-function Start(): JSX.Element { 
+function Start({navigation}: Record<any,any>): JSX.Element {
+    useEffect(() => { 
+        setTimeout(() => {
+            navigation.navigate('Home');
+        }, 2000);
+    }, []);
+
     return (
         <View style={styles.start}>
             <Image source={require('../images/start_page_bg.png')} style={[globalStyle.width100, globalStyle.height100]} />

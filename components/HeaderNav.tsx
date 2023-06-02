@@ -6,7 +6,7 @@ function HeaderNav(props:Record<any,any>): JSX.Element {
     const [screenWidth, setScreenWidth] = useState(0);
 
     useEffect(() => {
-        setScreenWidth((Dimensions.get('screen').width - 140));
+        setScreenWidth((Dimensions.get('screen').width - 230));
     }, []);
 
     const goBack = (): void => { 
@@ -16,13 +16,15 @@ function HeaderNav(props:Record<any,any>): JSX.Element {
     return (
         <View style={styles.headerNav}>
             <TouchableWithoutFeedback onPress={goBack}>
-                <Image source={require('../images/back_icon.png')} style={styles.backIcon} />
+                <View style={styles.leftPart}>
+                    <Image source={require('../images/back_icon.png')} style={styles.backIcon} />
+                </View>
             </TouchableWithoutFeedback>
-            <View style={styles.title} >
+            <View style={[styles.title,{ width: screenWidth }]} >
                 <Text>{ props.title }</Text>
             </View>
             <View style={styles.rightPart}>
-                <Text>管理</Text>
+                <Text>{ props.rightTip }</Text>
             </View>
         </View>
     )
@@ -35,14 +37,21 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        height: 50,
+        height: 40,
         backgroundColor: '#FFFFFF',
+    },
+
+    leftPart: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: 100,
+        marginLeft: 10,
     },
 
     backIcon: {
         width: 25,
         height: 25,
-        marginLeft: 10,
     },
 
     title: {
@@ -50,15 +59,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 35,
     },
 
     rightPart: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        width: 50,
-        marginRight: 15,
+        width: 100,
+        marginRight: 10,
     }
 });
 
