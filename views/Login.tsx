@@ -34,6 +34,19 @@ class Login extends React.Component {
                             <Text style={[globalStyle.font12, globalStyle.color_5c8acc]}>《隐私协议》</Text>
                         </View>
                     </TouchableWithoutFeedback>
+                    <View style={styles.phoneLogin}>
+                        <Image source={require('../images/phone_login_icon.png')} style={styles.phoneLoginIcon} />
+                        <Text style={[globalStyle.font14,globalStyle.color_white,globalStyle.ml5]}>手机号登录</Text>
+                    </View>
+                    <View style={styles.line}></View>
+                    <View style={styles.wechatLogin}>
+                        <Image source={require('../images/wechat_login_icon.png')} style={styles.wechatLoginIcon} />
+                        <Text style={[globalStyle.font14,globalStyle.color_white,globalStyle.ml5]}>微信登录</Text>
+                    </View>
+                    <View style={styles.iosLogin}>
+                        <Image source={require('../images/ios_login_icon.png')} style={styles.iosLoginIcon} />
+                        <Text style={[globalStyle.font14,globalStyle.color_a1a1a1,globalStyle.ml5]}>苹果登录</Text>
+                    </View>
                 </View>
             </View>
         )
@@ -114,6 +127,67 @@ const styles = StyleSheet.create({
     checkIcon: {
         width: 15,
         height: 15
+    },
+
+    phoneLogin: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '70%',
+        height: 40,
+        backgroundColor: '#E6E6E6',
+        borderRadius: 20,
+        marginTop: 30
+    },
+
+    phoneLoginIcon: {
+        width: 20,
+        height: 20
+    },
+
+    line: {
+        width: 40,
+        height: 2,
+        backgroundColor: '#E5E5E5',
+        marginTop: 50
+    },
+
+    wechatLogin: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '70%',
+        height: 40,
+        backgroundColor: '#49C43C',
+        borderRadius: 20,
+        marginTop: 30
+    },
+
+    wechatLoginIcon: {
+        width: 30,
+        height: 30
+    },
+
+    iosLogin: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '70%',
+        height: 40,
+        backgroundColor: '#F7F7F7',
+        borderRadius: 20,
+        borderColor: '#E5E5E5',
+        borderWidth: 1,
+        boxSizing: 'border-box',
+        marginTop: 30
+    },
+
+    iosLoginIcon: {
+        width: 30,
+        height: 30
     }
 });
 

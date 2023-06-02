@@ -187,6 +187,10 @@ export default globalStyle = StyleSheet.create({
     color: '#999',
   },
 
+  color_a1a1a1: {
+    color: '#A1A1A1',
+  },
+
   color_d2d2d2: {
     color: '#D2D2D2',
   },
