@@ -23,9 +23,11 @@ function HeaderNav(props:Record<any,any>): JSX.Element {
             <View style={[styles.title,{ width: screenWidth }]} >
                 <Text>{ props.title }</Text>
             </View>
-            <View style={styles.rightPart}>
-                <Text>{ props.rightTip }</Text>
-            </View>
+            <TouchableWithoutFeedback onPress={props.changeTip}>
+                <View style={styles.rightPart}>
+                    <Text>{ props.rightTip }</Text>
+                </View>
+            </TouchableWithoutFeedback>
         </View>
     )
 }
